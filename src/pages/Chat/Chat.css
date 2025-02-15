@@ -1,0 +1,34 @@
+
+
+.chat-page {
+  max-width: 1400px;
+  padding: 0 20px;
+  margin: 0 auto;
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.middle-side {
+  max-width: 800px;
+  width: 100%;
+  padding-top: 20px;
+}
+
+.chat-right-side {
+  background-color: #fff;
+  border-radius: 10px;
+  max-width: 350px;
+  width: 100%;
+  padding: 10px;
+  box-shadow: var(--profileShadow);
+}
+
+.chat-item {
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.chat-item:hover {
+  transform: scale(1.05);
+}

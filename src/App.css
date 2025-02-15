@@ -1,0 +1,17 @@
+:root {
+  --inputColor: rgba(10, 15, 85, 0.5);
+  --cardColor: rgba(240, 240, 240, 0.45);
+  --profileShadow: 0px 4px 20px 2px rgba(0, 0, 0, 0.25);
+  --buttonBg: linear-gradient(100deg, #25cff9 0%, #0ca3c9 50%, #0d3fac 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', serif;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
