@@ -26,6 +26,10 @@ const ChatBox = ({setModal, socket}) => {
   const imgRef = useRef()
   const scrollRef = useRef()
 
+  useEffect(() => {
+    scrollRef.current?.scrollIntoView({behavior: "smooth"})
+  }, [messages])
+
   const id = currentChat?.members.find(id => id !== currentUser._id)
 
   const isOnline = (id) => {
@@ -143,7 +147,7 @@ const ChatBox = ({setModal, socket}) => {
             {
               messages.map(message => {
                 return (
-                  <div key={message._id} className={message.senderId === currentUser._id ? "message own" : "message"}>
+                  <div ref={scrollRef} key={message._id} className={message.senderId === currentUser._id ? "message own" : "message"}>
                     {message.file && <img src="" alt="" className="message-img" />}                    
                     <span className="message-text">{message.text}</span>
                     <span className="message-data">{format(message.createdAt)}</span>
